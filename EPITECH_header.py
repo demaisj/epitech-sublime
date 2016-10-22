@@ -1,12 +1,28 @@
 import sublime, sublime_plugin
 import getpass, pwd, time, os, re
 
-def get_syntax():
-	return {
-		'comment_start': '/*',
-		'comment'      : '**',
-		'comment_end'  : '*/'
-	}
+def get_syntax(ext):
+	if ext in ['c', 'cpp', 'h', 'hpp']:
+		return {
+			'comment_start': '/*',
+			'comment'      : '**',
+			'comment_end'  : '*/'
+		}
+	elif ext in ['mk', 'sh']:
+		return {
+			'comment_start': '#',
+			'comment'      : '#',
+			'comment_end'  : '#'
+		}
+
+def get_ext():
+	var = sublime.active_window().extract_variables()
+	sext = var['file_extension']
+	if var['file_extension'] == "":
+		ext = "sh"
+	elif var['file_name'] == "Makefile":
+		ext = "mk"
+	return ext
 
 class EpitechHeaderCommand(sublime_plugin.TextCommand):
 	header  = '{comment_start}\n'
@@ -20,8 +36,8 @@ class EpitechHeaderCommand(sublime_plugin.TextCommand):
 	header += '{comment_end}\n'
 
 	def run(self, edit):
-		ext = sublime.active_window().extract_variables()['file_extension']
-		if ext not in ['c', 'cpp', 'h', 'hpp']:
+		self.ext = get_ext()
+		if self.ext not in ['c', 'cpp', 'h', 'hpp', 'mk', 'sh']:
 			return
 		data = self.set_variables(edit)
 		self.view.insert(edit, 0, self.header.format(**data))
@@ -43,7 +59,7 @@ class EpitechHeaderCommand(sublime_plugin.TextCommand):
 			'start'  : time.strftime('%a %b %_d %T %Y'),
 			'update' : time.strftime('%a %b %_d %T %Y')
 		}
-		data.update(get_syntax())
+		data.update(get_syntax(self.ext))
 		return data
 
 class EpitechHeader(sublime_plugin.EventListener):
@@ -53,7 +69,7 @@ class EpitechHeader(sublime_plugin.EventListener):
 
 class EpitechHeaderUpdateCommand(sublime_plugin.TextCommand):
 	def run(self, edit):
-		syntax = get_syntax()
+		syntax = get_syntax(get_ext())
 		pattern = '^{} Last update .*'.format(re.escape(syntax['comment']))
 		region = self.view.find(pattern, 0)
 		string = time.strftime('{} Last update %a %b %_d %T %Y {}')
