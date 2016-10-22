@@ -12,9 +12,9 @@ def get_syntax(ext):
 		}
 	elif ext in ['mk', 'sh']:
 		return {
-			'comment_start': '#',
-			'comment'      : '#',
-			'comment_end'  : '#'
+			'comment_start': '##',
+			'comment'      : '##',
+			'comment_end'  : '##'
 		}
 
 def get_ext():
