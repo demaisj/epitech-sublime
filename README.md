@@ -5,7 +5,13 @@ Implement some useful plugins to Sublime Text in order to survive at EPITECH.
 *Only works on UNIX systems.*
 
 ### Installation
-* Put the `EPITECH_Sublime` folder (and not its files) in `~/.config/sublime_text_3/Packages/`.
+* `cd ~/.config/sublime_text_3/Packages/`.
+* `git clone https://github.com/lodi-g/EPITECH_Sublime`
+* Restart Sublime Text.
+
+### Update
+* `cd ~/.config/sublime_text_3/Packages/EPITECH_Sublime`.
+* `git pull`
 * Restart Sublime Text.
 
 ### Keymap
