@@ -21,7 +21,7 @@ Implement some useful plugins to Sublime Text in order to survive at EPITECH.
 
 
 ### Plugins
-* ##### Header
+* **Header**:
   Adds a norm-validated header which updates the hour on save.
   Only with .c, .cpp, .h, .hpp, .mk & .sh files.
 
