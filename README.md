@@ -1,12 +1,13 @@
-# EPITECH Sublime
+# [EPITECH Sublime](https://tektools.epi.codes)
 
 Implement some useful plugins to Sublime Text in order to survive at EPITECH.
 
 *Only works on UNIX systems.*
 
 ### Installation
-* `cd ~/.config/sublime_text_3/Packages/`.
-* `git clone https://github.com/lodi-g/EPITECH_Sublime`
+* Press `ctrl+shift+p` to open te command palette.
+* Search for *Package Control: Add Repository*
+* Type `https://github.com/lodi-g/EPITECH_Sublime`
 * Restart Sublime Text.
 
 ### Update
