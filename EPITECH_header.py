@@ -105,6 +105,7 @@ class EpitechHeaderCommand(sublime_plugin.TextCommand):
 		self.ext = get_language(self)
 		if self.ext not in supported_languages:
 			sublime.message_dialog("Warning:\n\nThe current selected syntax is not supported by EPITECH_Sublime. We're adding one anyway.\nIf you want to add support for this syntax please report an issue in our GitHub repo.")
+			self.ext = 'Plain text'
 		data = self.set_variables(edit)
 		self.view.insert(edit, 0, self.header.format(**data))
 		selection = self.view.sel()
