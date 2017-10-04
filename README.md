@@ -1,4 +1,4 @@
-# [EPITECH Sublime](https://tektools.epi.codes)
+# epitech-sublime
 
 Implement some useful plugins to Sublime Text in order to survive at EPITECH.
 
@@ -31,6 +31,6 @@ Implement some useful plugins to Sublime Text in order to survive at EPITECH.
 
 
 ### Contributors
-* Me
-* [Nodyn](https://github.com/NegiAD)
-* [Death_Miner](https://www.github.com/DeathMiner)
+* [demaisj](https://github.com/demaisj)
+* [Nodyn](https://github.com/WhatNodyn)
+* [lodi-g](https://github.com/lodi-g)
