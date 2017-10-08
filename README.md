@@ -1,34 +1,25 @@
 # epitech-sublime
 
-Implement some useful plugins to Sublime Text in order to survive at EPITECH.
+Epitech's Coding Style compliant configurations for the Sublime Text 3 editor.
 
-*Only works on UNIX systems.*
+### Features
+- **Header**: `alt+shift+h`
+
+  Adds a valid header at the start of your file upon keyboard shortcut, autocompleting project name & year.
 
 ### Installation
-* Press `ctrl+shift+p` to open the command palette.
-* Search for *Package Control: Add Repository*
-* Type `https://github.com/lodi-g/EPITECH_Sublime`
-* Restart Sublime Text.
-* Open the command palette again. (`ctrl+shift+p`)
-* Search for *Package Control: Install* (Hint: `pkgctlin`)
-* Type `EPITECH_Sublime` and press Enter.
+- Press `ctrl+shift+p` to open the command palette.
+- Search for "*Package Control: Add Repository*"
+- Type `https://github.com/demaisj/epitech-sublime`
+- Restart Sublime Text.
+- Open the command palette again. (`ctrl+shift+p`)
+- Search for "*Package Control: Install*"
+- Type `epitech-sublime` and press Enter.
 
-### Update
-* `cd ~/.config/sublime_text_3/Packages/EPITECH_Sublime`.
-* `git pull`
-* Restart Sublime Text.
-
-### Keymap
+### Keyboard shortcuts
 |Key|Command|
 |---|---|
-|`Super + Shift + h`| Adds an EPITECH (norm) valid header.|
-
-
-### Plugins
-* **Header**:
-  Adds a norm-validated header which updates the hour on save.
-  Only with .c, .cpp, .h, .hpp, .mk & .sh files.
-
+|`alt+shift+h`|Adds a valid header to your file.|
 
 ### Contributors
 * [demaisj](https://github.com/demaisj)
