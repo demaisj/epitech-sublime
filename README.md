@@ -8,13 +8,10 @@ Epitech's Coding Style compliant configurations for the Sublime Text 3 editor.
   Adds a valid header at the start of your file upon keyboard shortcut, autocompleting project name & year.
 
 ### Installation
+This plugin is now available as **Epitech Coding Style** on package control.
 - Press `ctrl+shift+p` to open the command palette.
-- Search for "*Package Control: Add Repository*"
-- Type `https://github.com/demaisj/epitech-sublime`
-- Restart Sublime Text.
-- Open the command palette again. (`ctrl+shift+p`)
-- Search for "*Package Control: Install*"
-- Type `epitech-sublime` and press Enter.
+- Search for "*Package Control: Install Package*"
+- Type `Epitech Coding Style` and press Enter.
 
 ### Keyboard shortcuts
 |Key|Command|
